@@ -14,6 +14,9 @@ save changes
 
 git add . (. for saving changes made throughout the repo)
 
+if modified files (not newly created) [commit with add]
+-> git commit -am "title" -m "description"
+
 git status (check status of repo)
 
 git commit -m "<title of commit>" -m "<description of commit>" (Saved code locally not on github)
@@ -30,4 +33,25 @@ git push
         Let your device know about your private key:
             eval "$(ssh-agent -s)"
             ssh -add ~/.ssh/id_rsa
--> git push origin master
+
+DEFAULT location:
+-> git push origin HEAD:main (new)
+-> OR git push origin HEAD:master (old)
+-> git push -u origin main (set deafault so next time you can only use git push)
+Create-New-Repo:   
+    git remote add origin <new_empty_repo_link>
+    git remote -v (see the linked repo)
+Braching:
+    git branch
+    git checkout -b <new_branch_name>
+    git checkout <branch_name>
+    git push -u origin <branch_name>
+diff:
+    (from main): git diff <branch_name> (exit: q)
+pull:
+    git pull -u origin master (get the lasted updated code)
+merge:
+    (from brach): git merge master
+    -> fix conflicts 
+delete (after merging with main):
+    git branch -d <branch_name>
