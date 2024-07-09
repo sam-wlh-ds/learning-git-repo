@@ -55,3 +55,13 @@ merge:
     -> fix conflicts 
 delete (after merging with main):
     git branch -d <branch_name>
+Undoing Git Commit:
+    Last Commit:
+        -> git reset HEAD~1 (HEAD~1 : pointer to the latest change)
+    Other Commits:
+        -> git log (see all your commits) [Get hash of the commit]
+        -> git reset <commit_hash> (don't change the code just forget the commit)
+        -> git reset --hard <commit_hash> (change the code as it was before the commit and forget the commit)
+
+FORK: Forking a repo gives you full admin access to that repo as it copies that repo in to your account , you can change it as you want
+but the changes will only be only in your account to make changes in the original repo you need to create a pull request (Do directly by GitHub).
